@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@root": ["./"],
+      "@root/*": ["./*"],
+      "@pages": ["./pages"],
+      "@pages/*": ["./pages/*"],
+      "@globals": ["./globals"],
+      "@globals/*": ["./globals/*"],
+      "@layouts": ["./layouts"],
+      "@layouts/*": ["./layouts/*"],
+      "@libs": ["./libs"],
+      "@libs/*": ["./libs/*"],
+      "@components": ["./components"],
+      "@components/*": ["./components/*"]
+    }
+  }
+}

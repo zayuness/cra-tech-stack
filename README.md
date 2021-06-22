@@ -13,6 +13,8 @@ version: minimal-settings
 
 - craco
 - emotion
+- react-router-dom v6
+- react-helmet-async
 
 ## vscode extensions
 

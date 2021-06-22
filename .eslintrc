@@ -29,8 +29,9 @@
   },
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-console": "warn",
     "prettier/prettier": [
-      "error",{
+      "error", {
         "endOfLine": "auto"
       }
     ]
