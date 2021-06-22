@@ -8,6 +8,7 @@ version: minimal-settings
 - framework: CRA, Create React App with typescript template
 - editor: vscode
 - formatter: eslint & prettier
+- state manager: redux
 
 ## libraries
 
@@ -63,4 +64,14 @@ npm i -D  `
   eslint-import-resolver-typescript `
   eslint-plugin-prettier  `
   prettier
+```
+
+## redux
+
+```powershell
+npm i `
+  redux  `
+  react-redux `
+  redux-logger
+npm i -D redux-devtools
 ```

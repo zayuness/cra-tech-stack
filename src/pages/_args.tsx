@@ -11,6 +11,17 @@ const home = {
   component: "Home",
 };
 
-const args = [home];
+const test = {
+  name: "test",
+  head: {
+    title: "테스트 페이지",
+    tags: <></>,
+  },
+  path: "/test",
+  layout: "default",
+  component: "Test",
+};
+
+const args = [home, test];
 
 export default args;
