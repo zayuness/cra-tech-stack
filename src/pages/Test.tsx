@@ -3,9 +3,9 @@ import React from "react";
 import { useReduxTest } from "@libs/hooks";
 
 const Test = () => {
-  const { test, onUpdateTest } = useReduxTest();
+  const { test, onSwitchTest } = useReduxTest();
 
-  const click = () => onUpdateTest();
+  const click = () => onSwitchTest();
 
   return (
     <button onClick={click}>

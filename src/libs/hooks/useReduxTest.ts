@@ -1,20 +1,22 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { updateTest } from "@redux/actions/test";
+import { actions } from "@root/redux/modules";
+
+const { updateTest } = actions;
 
 const useReduxTest = () => {
   const test = useSelector((state: RootState) => state.test);
   const dispatch = useDispatch();
 
-  const onUpdateTest = React.useCallback(
+  const onSwitchTest = React.useCallback(
     () => dispatch(updateTest()),
-    [dispatch],
+    [dispatch, updateTest],
   );
 
   return {
     test,
-    onUpdateTest,
+    onSwitchTest,
   };
 };
 

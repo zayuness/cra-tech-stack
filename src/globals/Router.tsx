@@ -13,7 +13,7 @@ const Router = () => {
             key={page.name}
             exact
             path={page.path}
-            component={Page(page)}
+            component={() => Page(page)}
           />
         ))}
       </Switch>

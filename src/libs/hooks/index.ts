@@ -1,6 +1,7 @@
 import useReduxTest from "./useReduxTest";
+import useReduxUser from "./useReduxUser";
 
-export { useReduxTest };
+export { useReduxTest, useReduxUser };
 
-const hooks = { useReduxTest };
+const hooks = { useReduxTest, useReduxUser };
 export default hooks;

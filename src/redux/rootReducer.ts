@@ -1,13 +1,9 @@
 import { combineReducers } from "redux";
 
-import test from "./test";
+import { reducers } from "./modules";
 
 const rootReducer = combineReducers({
-  test,
+  ...reducers,
 });
 
 export default rootReducer;
-
-declare global {
-  type RootState = ReturnType<typeof rootReducer>;
-}
