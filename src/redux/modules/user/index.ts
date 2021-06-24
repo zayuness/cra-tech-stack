@@ -1,9 +1,9 @@
 import { createReducer } from "typesafe-actions";
 import produce from "immer";
 
-import fetchUserById, { fetchUserByIdAction } from "./fetchUserById";
+import fetchUserByIdSaga, { fetchUserByIdAction } from "./fetchUserById";
 
-export { fetchUserById, fetchUserByIdAction };
+export { fetchUserByIdSaga, fetchUserByIdAction };
 
 const userState = {
   fetchStatus: "initial",
@@ -44,7 +44,7 @@ export const userReducer = createReducer(userState)
 
 const user = {
   userReducer,
-  fetchUserById,
+  fetchUserByIdSaga,
   fetchUserByIdAction,
 };
 export default user;

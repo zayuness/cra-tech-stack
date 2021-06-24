@@ -1,15 +1,20 @@
 import { createStore, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
+import createSagaMiddleware from "redux-saga";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { ActionType } from "typesafe-actions";
 
 import rootReducer from "./rootReducer";
+import rootSaga from "./rootSaga";
 import { actions } from "./modules";
+
+const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
   rootReducer,
-  composeWithDevTools(applyMiddleware(thunk)),
+  composeWithDevTools(applyMiddleware(sagaMiddleware)),
 );
+
+sagaMiddleware.run(rootSaga);
 
 declare global {
   type RootState = ReturnType<typeof store.getState>;

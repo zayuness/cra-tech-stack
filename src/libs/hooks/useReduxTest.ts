@@ -1,9 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { actions } from "@root/redux/modules";
-
-const { updateTest } = actions;
+import { updateTest } from "@redux/modules";
 
 const useReduxTest = () => {
   const test = useSelector((state: RootState) => state.test);
@@ -11,7 +9,7 @@ const useReduxTest = () => {
 
   const onSwitchTest = React.useCallback(
     () => dispatch(updateTest()),
-    [dispatch, updateTest],
+    [dispatch],
   );
 
   return {

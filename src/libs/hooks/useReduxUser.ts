@@ -1,20 +1,26 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { thunks } from "@root/redux/modules";
+import { sagas } from "@root/redux/modules";
 
-const { fetchUserById } = thunks;
+const { fetchUserById } = sagas;
 
 const useReduxUser = () => {
   const user = useSelector((state: RootState) => state.user);
   const dispatch = useDispatch();
 
   const onFetchUserById = React.useCallback(
-    async (userId: number) => {
-      const resultAction = await dispatch(fetchUserById(userId));
-      return resultAction;
+    (userId: number) => {
+      // const resultAction = await dispatch(fetchUserById(userId));
+      // return resultAction;
+      // 임시;
+      if (user.fetchStatus === "initial") {
+        return dispatch(fetchUserById(userId));
+      } else {
+        return null;
+      }
     },
-    [dispatch],
+    [dispatch, user],
   );
 
   return { user, onFetchUserById };
